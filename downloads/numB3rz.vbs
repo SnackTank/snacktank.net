@@ -1,11 +1,11 @@
 
-a=MsgBox("Would you like to play a randomized number game?" ,4+64, "Numbers!")
+a=MsgBox("Would you like to play a randomized number game?" ,4+64, "numB3rz!")
 
 score= Int(0)
 attempts= Int(0)
 
 if a= vbYes Then
-z=InputBox("Please choose a difficulty. 10,50,100" , "You can choose you own!" , "100")
+z=InputBox("Please choose a difficulty. 10,50,100" , "You can choose your own!" , "100")
 
 
 
@@ -28,11 +28,11 @@ randomize
 nValue= Int((z * Rnd) + 1)  
 
 ElseIf q > nValue Then
-c=MsgBox("Too high!")
+c=MsgBox("Too high!", 0+48)
 attempts= Int(attempts + 1)
 
 ElseIf q < nValue Then
-d=MsgBox("Too low!")
+d=MsgBox("Too low!", 0+64)
 attempts= Int(attempts + 1)
 
 
