@@ -1,14 +1,18 @@
 let selectElement = document.querySelector('select');
 
+var softwarePage = document.getElementById("softwarePage");
+
 selectElement.addEventListener('change', function() {
-  if(selectElement.value === "javaPong") {
-	window.open('funstuff/javapong.html', '_self');
+  if(selectElement.value == "javaPong") {
+	softwarePage.height = "75%"
+	softwarePage.src = 'funstuff/javapong.html';
   }
-  if(selectElement.value === "ll") {
-  console.log("What?!");
-  window.open('funstuff.html', '_self');
+  if(selectElement.value == "ll") {
+	softwarePage.height = "78%"
+	softwarePage.src = 'funstuff/laserlabyrinth.html';
   }
-  if(selectElement.value === "numB3rz") {
-  window.open('funstuff/numb3rz.html', '_self');
+  if(selectElement.value == "numB3rz") {
+	softwarePage.height = "32%"
+	softwarePage.src = 'funstuff/numB3rz.html';
   }
 });
