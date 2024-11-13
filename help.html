@@ -1,7 +1,6 @@
 <html>
 <title>snacktank.net</title>
-  <style>
-
+<style>
 body {
   margin: 0;
   padding: 0;
@@ -38,42 +37,71 @@ nav ul li a {
 }
 
 .maintext {
-
   max-width: 1500px;
   text-align: left;
 }
 
 .maintext p {
-font-weight: normal;
+  font-weight: normal;
+}
+
+.frame {
+  width: 90%; 
+  float: right; 
+}
+
+.sidebar {
+  width: 10%; 
+  float: left; 
+  clear: both; 
 }
 
 </style>
+</head>
 
 <body>
- <div class="top-bar">
- 
-    <a href="index.html" class="logo">snacktank.net</a>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="funstuff.html">Games</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="other.html">Other</a></li>
-		<li><a href="about.html">About</a></li>
-		<li><a href="help.html">Help</a></li>
-      </ul>
-    </nav>
-  </div>
-  
-  <center>
-  
-  <div class="maintext">
-  <h1>Page not finished yet!</h1>
-  <p>This page is not complete! Please come back again soon!</p>
-  </div>
-  
-  </center>
-  
+<div class="top-bar">
+  <a href="index.html" class="logo">snacktank.net</a>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="funstuff.html">Games</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="other.html">Other</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="help.html">Help</a></li>
+    </ul>
+  </nav>
+</div>
+
+<h1>HELP!</h1>
+<p title="*Maybe">A page that will help you 100% of time.*
+
+<select title="Javascript not working? Just type 'http://snacktank.net/help/nameOfPage.html'">
+    <option value="ll" title="main.html" >Laser Labyrinth</option>
+</select>
+
+</p>
+
+
+<hr>
+
+<div class="sidebar" id="barOfSide">
+  <strong>Laser Labyrinth</strong>
+  <hr>
+  <a href="#" onclick="open2('help/ll/main.html/');">Main Page</a> <br>
+  <a href="#" onclick="open2('help/ll/install.html/');">How to install</a> <br>
+  <a href="#" onclick="open2('help/ll/run.html/');">Running Page</a> <br>
+</div>
+
+<div class="frame">
+  <iframe id="helpPage" src="help/ll/main.html" height="75%" width="100%" style="border: none;"></iframe>
+</div>
+
+
+
 </body>
+
+<script src="help/ll/script.js"></script>
 
 </html>
