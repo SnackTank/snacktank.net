@@ -9,9 +9,9 @@ selectElement.addEventListener('change', function() {
 	helpPage.src = 'help/ll/main.html';
 	let page = document.getElementById("barOfSide");
 	page.innerHTML = '';
-	page.innerHTML += '<a href="#" onclick="open2(\'help/ll/main.html/\');">Main Page</a> <br>';
-	page.innerHTML += '<a href="#" onclick="open2(\'help/ll/run.html/\');">Running Page</a> <br>';
-	page.innerHTML += '<a href="#" onclick="open2(\'help/ll/install.html/\');">How to install</a> <br>';
+	page.innerHTML += '<a href="#" onclick="open2(\'https://snacktank.net/help/ll/main.html\');">Main Page</a> <br>';
+	page.innerHTML += '<a href="#" onclick="open2(\'https://snacktank.net/help/ll/run.html\');">Running Page</a> <br>';
+	page.innerHTML += '<a href="#" onclick="open2(\'https://snacktank.net/help/ll/install.html\');">How to install</a> <br>';
   }
 });
 
