@@ -1,45 +1,18 @@
 <html>
 <title>snacktank.net</title>
+<link rel="stylesheet" href="css/font.css">
   <style>
 
 body {
   margin: 0;
   padding: 0;
-  font-family: Comic Sans MS, sans-serif;
-}
-
-.top-bar {
-  background-color: blue;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-}
-
-.logo {
-  font-size: 20px;
-  text-decoration: none;
-  color: white;
-}
-
-nav ul {
-  list-style-type: none;
-  display: flex;
-}
-
-nav ul li {
-  margin-right: 10px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: white;
+  background-image: url("images/stars.gif");
+  color:white;
 }
 
 .maintext {
 
-  max-width: 1500px;
+  max-width: 1500px; 
   text-align: left;
 }
 
@@ -59,37 +32,54 @@ font-weight: normal;
 
 .cBottom {
 	clear: both;
+	float:left;
+}
+
+
+.cRBottom {
+	width: 45%;	
+	float:right;
+}
+
+.lineBottom {
+	clear: both;
+}
+
+marquee {
+	margin: 0;
+	padding: 0;
+	line-height: 0.95;
+}
+
+@keyframes blink {
+        0, 100% { opacity: 1; }
+    	50% { opacity: 0; }      
+}
+
+#yt_title, #sw_title, #n_title, #ml_title {
+	animation: blink 1s step-start infinite;
 }
 
 </style>
 
 <body>
- <div class="top-bar">
- 
-    <a href="index.html" class="logo">snacktank.net</a>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="funstuff.html">Games</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="other.html">Other</a></li>
-		<li><a href="about.html">About</a></li>
-		<li><a href="help.html">Help</a></li>
-      </ul>
-    </nav>
+ <div id="top-bar">
+    
+        <script src="js/navbar.js"></script>
+
   </div>
-  
+
   <center>
   
   <div class="maintext">
-  <h1>Welcome!</h1>
+  <marquee direction="right" scrollamount="15"><h1>Welcome to snacktank.net!</h1></marquee>
   <p>Hello and welcome to snacktank.net! Here I share my software and games to the world.
   There's informatoin about things that strike my intrest and news about my youtube channel.
   Feel free to take a look around!</p>
   <hr>
   <div class="container">
 	<div class="cLeft">
-		<h2>Youtube Channel</h2>
+		<h2 id="yt_title">Youtube Channel</h2>
 		<p>No new videos yet; I haven't posted a new video since June. I hoping that I'll post something
 		before the new year, but only time will tell. I just haven't had any good video ideas as of late,
 		hence the lack of videos. I've been planning a video with one of my friends for a while now,
@@ -99,7 +89,7 @@ font-weight: normal;
 		<a href="https://www.youtube.com/watch?v=tGTl2OqXVHM" title="Still the latest video from June, 2024">Latest Video</a></p>
 	</div>
 	<div class="cRight">
-		<h2>Software</h2>
+		<h2 id="sw_title">Software</h2>
 		<p>Laser Labyrinth is very much still in the works! Even though there hasen't been an
 		update in the last few months, the game is still being worked on. Recently I added
 		movement code to the eneimes, now they can fight back! I've also been working on a
@@ -107,17 +97,21 @@ font-weight: normal;
 		but now you can rest at night knowing that there will be a HD fullscreen version of
 		Laser Labyrinth!</p>
 	</div>
+	<div class="lineBottom"><hr></div>
 	<div class="cBottom">
-		<hr>
-		<h2>News</h2>
-		<p>
-		<li>Added Help page
-		<li>Added E-mail address into the 'About' page.
-		<li>New blog post (11/12/2024)
-		<li>Fixed Game page from opening links inside of the iframe
-		<li>Added News Category
+		<h2 id="n_title">News</h2>
+		<p>V1.1 (12/14/2024)
+		<li>Changed the welcome text to be a marquee.
+		<li>Added Miscellaneous Category
+		<li>All pages now have a background
+		<li>New Blog post!
+		<li>Miscellaneous GUI changes
 		</p>
 	</div>
+	<div class="cRBottom">
+		<h2 id="ml_title">Miscellaneous</h2>
+		<p>
+		<li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">placeholder</a> Something will be here soon ;)</li>
   </div>
   </div>
   

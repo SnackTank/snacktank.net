@@ -1,11 +1,11 @@
 <html>
-<title>snacktank.net</title>
-  <style>
-
+<link rel="stylesheet" href="../css/font.css">
+<style>
 body {
   margin: 0;
   padding: 0;
-  font-family: Comic Sans MS, sans-serif;
+  background-image: url("../images/stars2.gif");
+  color: white;
 }
 
 .maintext {
@@ -23,8 +23,55 @@ font-weight: normal;
   <center>
   
   <div class="maintext">
+	<h1>I switch to GNU/Linux!</h1>
+	<h3>12/13/2024</h3>
+	<p>
+	After much deliberation of several seconds, I decided to switch to Linux. It all started several weeks ago in when I was bored. Originally I tried to switch to FreeBSD--FreeBSD is NOT a Linux distro--but after two days of trying, I realized that I was never going to get Steam running. So instead of installing
+        Windows 10 again, I decied to install Debian linux. So other than being 'bored', why did I switch from Windows??? Well there's a few reasons. One of them is that Windows is trying to shove AI into their OS. Another reason is because my Personal Computer doesn't support the minium system requirements for
+        Windows 11. <br>
+        If you're wondering, here's my PC specs: <br>
+        CPU: Intel i7-6700 (8) @ 4.000GHz <br>
+        GPU: Nvidia GeForce GTX 650 Ti <br>
+        RAM: 8 GB <br>
+        Sure, my PC is a 'little' old--For reference my GPU was released in 2012, over 10 years ago--but it ran Windows 10 just fine, so why can't it run Windows 11? Basically, Microsoft wants me to get a new computer, which I should but I'm broke. To make this post easier to read, I'll be breaking up everything in
+        sections. Feel free to skip around. <br> <br>
+        <strong>I. INSTALLATION:</strong> <br>
+        As mentioned before, I originally tried to use FreeBSD. I spent two days installing and setting up drivers. I got the Nvidia drivers working just fine, but then it came to gaming, which is basically impossible on FreeBSD. Sure you can 'run' Steam with the use of wine, however I could never get it working. Plus
+        if I did get it working, how would I run any game that wasn't 20+ years old? After coming to that realization, I decided to install Linux instead--at least then I would have a little hope of gaming. But then came an issue, what distro to use? Before installing Linux, I've only used two other Linux distro ever
+        Ubuntu and Debian, but I didn't want to use Ubuntu for it has bloat--for Linux standards. And I had trouble installing Debian in the past.  So I'll be starting form essentially scratch. But I haven't answered the question yet: what distro to use? Well I picked Debian Linux; "But SnackTank", you may ask,
+        didn't you just say that you had trouble installing Debian in the past, why would you try again?" Good question, I decided that I like pain and tried again. After spending probably 2 minutes picking a distro, I had to install it. I still had the previous installation media, a DVD, of Debian Linux 12.5.
+        However at the time of installation, the latest version of Debian was 12.8. So guess who installed Debian 12.5 about 3 times and realized that it wasn't the newest version? After that I went to burn another DVD, yes I still use DVDs, of Debian 12.8. But when I was installing it, it couldn't find a file.
+        I tried about 5 times before giving up, and using a USB stick instead. Which worked first try! Now came installing Debian. After the several attempts of installing, I finally booted into my system. In the installation setup, I decided to use XFCE desktop manager. But I didn't want to use the GUI login screen
+        that Debian typically uses. So I decided to change to JWM and I disabled the GUI login, now I get to login with the tty and look like I know what I'm doing. Now came the second part: driver setup.
+        <br><br>
+        <strong>II. DRIVERS:</strong><br>
+        As stated earlier, I have a Nivida card. And setting up drivers, wasn't as hard as people would lead you to believe. All you gotta do is download the setup file from nvidia's website, and do 'sh NVIDIA-Drivers-123.123.12.run' to the file that you downloaded,  and that should do it. Of course when I did it,
+        it worked fine, but it later came to bite me in the rear end. Why? Because for some reason on my card, it didn't set up the Vulkan Drivers. So if you want a really complete installation of drivers, just search up "Nvidia drivers set up {Linux distro}" and you should get set to a page of how to do it for
+        your distro. Also when I first installed with the run file it didn't setup the OpenGL correctly. And I had to spend 2 days debugging that until I realized that reinstalling it would do the trick. Other drivers, like sound, were easy to setup and didn't cause any issues. One weird thing is about a week
+        after installing the graphics drivers, they just broke, just like that. I have no clue why and reinstalling, <strong>AGAIN</strong>, seemed to fix it. So I suggest when installing drivers, don't use their install tool, instead follow a guide of how to install drivers for your distro. Now with my drivers
+        <strong>FINALLY</strong> installed I can get to the thing that I do most!
+        <br><br>
+        <strong>III. DEVELOPMENT:</strong> <br>
+        Well I don't do this the most, it felt appropriate to put the category here. Software development is a given on Linux, it's basically what it's built for. So I was able to work on my projects that I worked on on Windows. Most of my programming is in Java, which is non-platform dependent, so I had no trouble
+        working on Laser Labyrinth and other things. Now software development is fun, but there's something else that I do, which depending on the person, is more fun.
+`       <br><br>
+        <strong>IV. GAMING:</strong><br>
+        It's pretty good on Linux actually. Yeah, gaming on Linux is totally possible--once you have the drivers installed--and is really good at. Sure there's a few Windows games that I can't run, because of my GPU is so dang old, but any OpenGL and any Linux based games run splendidly! Of course it's not all
+        sunshine and rainbows, but it's really good--compared to even four years ago. I am able to play all of my favorite games, except on BeamNG.dirve--more on that later, like Minecraft, Facotrio, Plants VS Zombies (Windows Only Game), Terrarria, etc. Now you may be asking "Doesn't BeamNG.drive have an native
+        Linux client now?" To that I say yes it does! However it requires Vulkan, which my GPU has terrible support for. So I can't run any games that require advance Vulkan, which is sad. Because BeamNG.drive just got a new update and I can't try it out. (Well technically I did try it out on a different PC, but that's
+        besides the point.) Other than though, gaming on Linux is awesome!
+        <br><br>
+        <strong>V. YOU:</strong> <br>
+        That name's a little bit ominous, but I couldn't think of anything better. You might of been reading this and thinking to yourself, "Should I try GNU/Linux", to that I say YES! Now pick a distro, I'm not going to tell you how or what one to pick, just pick one! It's that easy! Then install, and setup some
+        stuff, etc, etc. Of course I don't know what your hardware is, and if you really thought about that, but you should try it out. For a week, month, year, what ever time period, heck even a day. You don't know if you would like Linux until you try it! Now go on, and install GNU/Linux on a vm or real hardware.
+        Become free from Windows *boom*. No seriously, you don't have to, but if you been looking in to it, just do it. You can always go back to the known later.
+        <br><br>
+        hey, this kind of a conclusion/update/whatever. this was the longest blog post that I've ever written on this site, i mean there's only two to judge it on, but still, it's the longest. also you might of noticed that the website has been updated and stuff, and yeah you would be correct. I'm going to go with
+        this theme for awhile until i get bored again and rewrite the entire site again. I’m planning to make this post into a video, probably with 10 times less text, and it'll finally make my hiatus on YouTube over. hopefully more post to come!
+	</p>
+	<hr>
+
 	<h1>New website update!</h1>
-	<p></p>
 	<h3>11/12/2024</h3>
 	<p>
 	The long awaited Help page is finally finished. Now if anyone has an issue, they could visit the help page to get a quick solution to their ploblem. This website has been left 
@@ -34,6 +81,7 @@ font-weight: normal;
 	and I'll finally get an upload scheude and not have several months hiatuses. I predict that the next blog post will probably be in May of 2025, lets hope that I do post before then. 
 	</p>
 	<hr>
+
 	<h1>I FINALLY made a website!</h1>
 	<h3>06/13/2024</h3>
 	<p>I've always been meaning to create a website but I would get stuck at the part of hosting it. But finally I solved that and created this website for everyone to enjoy! This website is not the
