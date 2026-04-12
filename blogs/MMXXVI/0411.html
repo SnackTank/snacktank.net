@@ -1,0 +1,48 @@
+<html>
+	<title>Never Trust the Client!</title>
+
+	<h1>Never Trust the Client!</h1>
+	<h3>04/11/2026</h3>
+	<p>
+	
+	This week I came across a website on this World Wide Web. It seemingly was locked behind a PIN and the UI suggested that it was probably only 6 digits long. I began to think “A 6 digit PIN is trivial to brute force.” 
+	A quick calculation yielded, assuming one guess per second, ~11 days of guessing. That is the worse case scenario and real attacks will be much faster. Then an even deeper insight “The PIN is probably some Javascript variable.” 
+	So I opened Inspect Element and what I saw would make any Cybersecurity conscious individual to cringe. 	
+	
+	<br><br>
+
+	First off, yes my hunch about a variable storing the PIN was correct. I was able to find the PIN and go to the next page, which was page to talk to a LLM. But that wasn’t even the worse part. The PIN page was just a CSS element. Yes you read that correctly, a CSS element. 
+	You didn’t even need to interact with the PIN. You just need to send a command to stop rendering the PIN page and start rendering the LLM page. This was probably because it was vibe coded, no thought was given to its creation. 
+	But I refuse to believe even the dumbest of all LLMs would make the PIN page and LLM page the same page!  So, how do we do it correctly?
+
+	<br><br>
+
+	I am in no way a Cybersecurity genius and well you should do your own research and design your own system: that’s how you learn.
+
+	<br><br>
+
+	What’s happening right now is the client requests the page and the server gives it; no questions asked. This is BAD! So let’s fix it! So we need to first provide a way for a user to log in. The PIN page will need an upgrade called “being separate from the LLM page.” 
+	And we can do this without any Javascript. All we need is an HTML form and 2 fields: username and password. And it’ll send the information in the request for the LLM page. It’ll be using the somewhat used Basic Auth header in HTTP. 
+	If someone tries to head to the LLM page directly the browser will ask for a username and password. Which I’ll set username as “user” and password “123456789ABC”. This should be done under TLS or SSL because Basic Auth just puts the password as Base64, no encryption. 
+	I’ll change the PIN from 6 to 12 characters to make it take ~31000 years to brute force instead of ~11 days---assuming worse case scenario. Of course the best way to do it is to rate limit to prevent them from repeated guessing. 
+	The server should check if the password matches with the username, and the user has access to the page. Then it should deliver the prompt page. This looks like Fort Knox compared to the password in the public facing Javascript. 
+	Now we won’t have to worry about people doing Inspect Element to bypass the PIN.
+
+	<br><br>
+
+	I believe there’s a lesson we can all learn from this: don’t put your passwords in JAVASCRIPT! And hiding something behind CSS does NOT protect anything. A person learning HTML for the first time could tell you that this design should never see the light of day again.
+
+	<br><br>
+
+	Here’s a “Too Long; Didn’t Read” overview.			<br>
+	Step I: Make the PIN page and LLM page separate pages. 		<br>
+	Step II: Do sever side authentication, NEVER TRUST THE CLIENT.	<br>
+	Step III: Enjoy!
+
+	<blockquote>
+	"Any application that can be written in JavaScript, will eventually be written in JavaScript." <br>
+	--- Jeff Atwood
+	</blockquote>
+ 
+	</p>	
+</html>
